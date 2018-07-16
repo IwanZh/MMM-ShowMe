@@ -1,0 +1,74 @@
+.row {
+    height: 50%;
+    width: 50%;
+    display: grid;
+    grid-gap: 0.1em;
+    margin: auto;
+  }
+  
+  .row>div {
+    padding: 0.1em;
+  }
+  
+  .mainImageSection {
+    background: grey;
+  }
+  
+  .mainImage {
+    background: #fdfdfd;
+  }
+  
+  .mainImage>img {
+    max-width: 500px;
+    height: auto;
+  }
+  
+  .mySlides {
+    width: auto;
+    max-height: 500px;
+  }
+  
+  .thumbnails {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0.1em;
+  }
+  
+  .thumbnails>div {
+    background: #fdfdfd;
+    /* border: 1px solid #333; */
+    height: auto;
+  }
+  
+  .thumbnail {
+    vertical-align: middle;
+    max-height: 120px;
+    border: 1px solid #333;
+    margin: auto;
+    padding: 0.1em;
+    height: auto;
+  }
+  
+  .thumbnail>img {
+    display: block;
+    max-width: 120px;
+    height: auto;
+    max-height: 120px;
+  }
+  
+  .videoWrapper {
+    position: relative;
+    /* 16:9 */
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+  }
+  
+  .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
