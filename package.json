@@ -1,0 +1,25 @@
+{
+  "name": "mmm-showme",
+  "version": "1.0.0",
+  "description": "Module for displaying Google Assistant user query on Magic Mirror²",
+  "main": "MMM-ShowMe.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://www.github.com/IwanZh/MMM-ShowMe"
+  },
+  "keywords": [
+    "Google",
+    "Assistant",
+    "display"
+  ],
+  "author": "IwanZh",
+  "license": "MIT",
+  "dependencies": {
+    "image-search-google": "^1.0.10",
+    "youtube-search": "^1.1.1"
+  }
+}
+

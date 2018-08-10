@@ -23,9 +23,6 @@ Module.register("MMM-ShowMe", {
 		//"https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
 	},
 
-	getScripts: function () {
-		return ["moment.js"];
-	},
 
 	start: function () {
 		this.sendSocketNotification("CONNECT", {
@@ -33,7 +30,7 @@ Module.register("MMM-ShowMe", {
 			"cseID": this.config.cseID
 		});
 		Log.info("Starting module: " + this.name);
-		moment.locale(config.language);
+
 	},
 
 	socketNotificationReceived: function (notification, payload) {
@@ -101,6 +98,15 @@ Module.register("MMM-ShowMe", {
 				wrapper.appendChild(row)
 			}
 			if (this.result.type === "videos") {
+				var youtubeID = this.result.message;
+				var videoWrapper = document.createElement("div");
+				videoWrapper.className = "videoWrapper";
+				var iframe = document.createElement("iframe");
+				iframe.src = "http://www.youtube.com/embed/" + youtubeID + "?autoplay=1&controls=0";
+				videoWrapper.appendChild(iframe);
+				wrapper.appendChild(videoWrapper);
+			}
+			if (this.result.type === "recipe") {
 				var youtubeID = this.result.message;
 				var videoWrapper = document.createElement("div");
 				videoWrapper.className = "videoWrapper";
